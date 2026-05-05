@@ -1,9 +1,14 @@
 # word-gloss
 
-Last change: 2026/05/05-17:42:14.
+Last change: 2026/05/05-18:11:03.
 
 Hilofumi Yamamoto, Ph.D.  
 Instute of Science Tokyo, Japan
+
+![Policy](https://img.shields.io/badge/policy-word--gloss-blue)
+![Format](https://img.shields.io/badge/format-JSON%20%2B%20Markdown-green)
+![Texts](https://img.shields.io/badge/texts-Classical%20Japanese-lightgrey)
+![License](https://img.shields.io/github/license/yamagen/word-gloss)
 
 This repository documents policies and rules for representing classical Japanese texts through multiple layers: word-gloss, literal translation, natural translation, and notes.
 

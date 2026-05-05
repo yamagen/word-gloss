@@ -1,8 +1,13 @@
 # word-gloss
 
-Last change: 2026/05/05-17:41:20.
+Last change: 2026/05/05-18:11:19.
 
 山元啓史、東京科学大学
+
+![方針](https://img.shields.io/badge/policy-word--gloss-blue)
+![形式](https://img.shields.io/badge/format-JSON%20%2B%20Markdown-green)
+![対象](https://img.shields.io/badge/text-Classical%20Japanese-lightgrey)
+![License](https://img.shields.io/github/license/yamagen/word-gloss)
 
 この repository は、古典日本語テキストを word-gloss, 逐語訳, 自然訳, notes の複数層で記述するための方針と規則を管理するものです。
 
