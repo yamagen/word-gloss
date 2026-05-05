@@ -1,11 +1,11 @@
 # word-gloss
 
-Last change: 2026/05/05-17:07:43.
+Last change: 2026/05/05-17:42:14.
 
 Hilofumi Yamamoto, Ph.D.  
 Instute of Science Tokyo, Japan
 
-This repository stores the word-gloss policy and related rules for gloss-annotated classical Japanese texts.
+This repository documents policies and rules for representing classical Japanese texts through multiple layers: word-gloss, literal translation, natural translation, and notes.
 
 The policy is designed for projects such as _Ise Monogatari_ and _Tosa Nikki_, where each text is represented through multiple layers:
 
