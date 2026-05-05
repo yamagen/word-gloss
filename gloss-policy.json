@@ -1,0 +1,158 @@
+{
+  "name": "word-gloss-policy",
+  "last_updated": "2026-05-05",
+  "principles": {
+    "primary_goal": "preserve observable signal chain",
+    "avoid": ["explanatory additions in word-gloss", "contextual interpretation in word-gloss", "reordering", "premature sentence integration", "lexical approximation of proper nouns"],
+    "layers": [
+      {
+        "name": "word-gloss",
+        "role": "preserve word alignment, morphology, and signal sequence"
+      },
+      {
+        "name": "literal translation",
+        "role": "preserve temporal order and phrase sequence"
+      },
+      {
+        "name": "natural translation",
+        "role": "integrate for readability without unnecessary addition"
+      }
+    ]
+  },
+  "fields": {
+    "required": ["word", "lemma", "kana", "lemma-kana", "romaji", "lemma-romaji", "gloss", "pos", "ku"],
+    "ku": {
+      "waka": "1-5",
+      "non_waka": 0
+    }
+  },
+  "gloss_rules": {
+    "atomic": true,
+    "dot_suffix_for_morphology": true,
+    "display_rule": "Use only the substring before the first dot in gloss-line display.",
+    "hyphen_policy": "Use hyphen to preserve multi-word glosses before the first dot.",
+    "examples": {
+      "recommended": ["get-wet.ADV", "rely-on.ADV", "jeweled-water", "all-the-more", "PST.ATTR", "nonexist.ATTR"],
+      "avoid": ["get.wet.ADV", "(accusative particle)", "to (DAT)", "said-to-be"]
+    }
+  },
+  "pos_policy": {
+    "pos_means": "structural category",
+    "gloss_means": "semantic or functional signal",
+    "allow_repeated_suffix_labels": true,
+    "examples": [
+      {
+        "word": "げ",
+        "gloss": "look.SUF",
+        "pos": "SUF"
+      },
+      {
+        "word": "ども",
+        "gloss": "PL.SUF",
+        "pos": "SUF"
+      }
+    ]
+  },
+  "morphology_suffixes": {
+    "ADV": "adverbial form",
+    "ATTR": "attributive form",
+    "IRR": "irrealis form",
+    "REALIS": "realis form",
+    "IMP": "imperative form"
+  },
+  "interpretation_policy": {
+    "signal_vs_interpretation": "word-gloss records observable signal, not receiver-side interpretation",
+    "namu": {
+      "gloss": "EMPH",
+      "note": "Desiderative readings are contextual interpretations, not fixed lexical meanings in word-gloss."
+    },
+    "mono_wo": {
+      "default_segmentation": ["もの", "を"],
+      "note": "Exclamatory or lingering force is handled in notes when context supports it."
+    }
+  },
+  "special_cases": {
+    "proper_nouns": {
+      "pos": "PN",
+      "rule": "Do not translate proper nouns by lexical approximation.",
+      "examples": [
+        {
+          "word": "梅壺",
+          "gloss": "Ume-tsubo",
+          "avoid": "plum jar"
+        },
+        {
+          "word": "深草",
+          "gloss": "Fukakusa",
+          "avoid": "deep grass"
+        }
+      ]
+    },
+    "tefu": {
+      "segmentation": [
+        {
+          "word": "て",
+          "gloss": "CONJ",
+          "pos": "P"
+        },
+        {
+          "word": "ふ",
+          "gloss": "say.ATTR",
+          "pos": "V"
+        }
+      ],
+      "note": "Segmented to preserve the visible chain while recognizing relation to 'to ifu'."
+    }
+  },
+  "literal_translation_triggers_to_avoid": [
+    {
+      "type": "lexical approximation",
+      "example": "梅壺 -> plum jar"
+    },
+    {
+      "type": "structural integration",
+      "example": "ぬれて -> while"
+    },
+    {
+      "type": "subject insertion",
+      "example": "見て -> watched"
+    },
+    {
+      "type": "contextual supplementation",
+      "example": "anticipating later context -> sang"
+    }
+  ],
+  "abbreviations": {
+    "ACC": "accusative particle",
+    "ADJ": "adjective",
+    "ADV": "adverbial form",
+    "ATTR": "attributive form",
+    "AUX": "auxiliary",
+    "COND": "conditional particle",
+    "CONJ": "conjunctive particle",
+    "DAT": "dative particle",
+    "DET": "determiner",
+    "EMPH": "emphatic particle",
+    "FUT": "modal auxiliary",
+    "GEN": "genitive particle",
+    "HON": "honorific",
+    "IMP": "imperative form",
+    "INTJ": "interjection",
+    "IRR": "irrealis form",
+    "N": "noun",
+    "NEG": "negative auxiliary",
+    "NMLZ": "nominalizer",
+    "P": "particle",
+    "PERF": "perfect auxiliary",
+    "PFX": "prefix",
+    "PL": "plural",
+    "PN": "proper noun",
+    "PST": "past auxiliary",
+    "Q": "question particle",
+    "QUOT": "quotative particle",
+    "REALIS": "realis form",
+    "SUF": "suffix",
+    "TOP": "topic particle",
+    "V": "verb"
+  }
+}
