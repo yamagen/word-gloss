@@ -1,6 +1,6 @@
 # word-gloss
 
-Last change: 2026/05/06-22:21:01.
+Last change: 2026/05/07-23:29:20.
 
 Hilofumi Yamamoto, Ph.D.  
 Institute of Science Tokyo, Japan
@@ -89,3 +89,9 @@ Natural translation may integrate the expression for readability. However, it sh
 ## License
 
 See `LICENSE`.
+
+## Toward a structured commentary
+
+This project treats JSON not merely as a storage format, but as a structure for a new type of classical commentary. The text, word-gloss, literal translation, natural translation, and notes are separated into layers so that readers can first follow the observable material of the original and consult interpretive notes only when needed.
+
+A fuller methodological statement is provided in `Preface.md`.
